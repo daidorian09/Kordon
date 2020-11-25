@@ -1,0 +1,46 @@
+{
+  "name": "kordon",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --project \"tsconfig.json\" --quiet",
+    "start": "node ./dist --NODE_ENV prod",
+    "start:dev": "nodemon --config nodemon.json",
+    "debug": "nodemon --inspect ./src"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "cors": "^2.8.5",
+    "couchbase": "^2.6.12",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http-status-codes": "^1.4.0",
+    "inversify": "^5.0.1",
+    "lodash": "^4.17.15",
+    "object-path": "^0.11.5",
+    "path": "^0.12.7",
+    "reflect-metadata": "^0.1.13",
+    "request": "^2.88.0",
+    "requestretry": "^4.1.1",
+    "uuid": "^8.3.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/couchbase": "^2.4.1",
+    "@types/express": "^4.17.2",
+    "@types/inversify": "^2.0.33",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.1.6",
+    "@types/object-path": "^0.11.0",
+    "@types/requestretry": "^1.12.7",
+    "@types/uuid": "^8.3.0",
+    "fs-extra": "^8.1.0",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.1.0",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  }
+}

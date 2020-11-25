@@ -57,7 +57,6 @@ export class MetricService {
     }
 
     private async checkClusterHealthStatus(): Promise<NodeJS.Timeout> {
-        logger.info(`MetricService - checkClusterHealthStatus is called`);
         return setInterval(async () => {
             for (const cluster of ConfigurationService.applicationConfiguration.clusters) {
                 logger.info(`Cluster : ${cluster.name} - Node : ${cluster.node} - Cluster Health Status`);

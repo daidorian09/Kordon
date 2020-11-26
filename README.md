@@ -1,5 +1,5 @@
 # Kordon | Elasticsearch Metric Notifier
-Kordon is simply aimed at having critical metrics capture, which is above your defined thresholds, and send alert(s) to slack channel. These critical metrics are cluster health status, CPU percentages of each node in cluster, JVM memory percentage of each node in cluster, indexing throttle status of each node in cluster. Configurations such as thresholds, slack webhook and so forth are stored in Couchbase as document that is consisting of key-value pair if any couchbase host is existing, default configurations will be set and configurations will be refreshed in every 3 minutes.
+Kordon is simply aimed at having critical metrics capture, which is above your defined thresholds, and send alert(s) to slack channel. These critical metrics are cluster health status, CPU percentages of each node in cluster, JVM memory percentage of each node in cluster, indexing throttle status of each node in cluster for now however they are extensible regarding to your metric requirements. Configurations such as thresholds, slack webhook and so forth are stored in Couchbase as document that is consisting of key-value pair if any couchbase host is non-existing, default configurations will be set and then refreshed in every 3 minutes.
 
 ***Before running application***, please make sure to have your configurations set correctly. Configurations are found in ```src/application.ts```. Configurations are customizable based on your settings
 
@@ -17,7 +17,7 @@ Clone this repository
 ### Step 3: Add global dependencies
 
 ```bash
-npm i -g tsc ts-node ts-mocha tslint nodemon
+npm i -g tsc ts-node tslint nodemon
 ```
 
 ### Step 4: Add local dependencies
@@ -32,7 +32,7 @@ npm i -D
 npm run start:dev
 ```
 
-### Step 6: Check readiness and liveness endpoints
+### Step 6: Check readiness or liveness endpoints
 
 ```bash
 Open browser and go to http://localhost:7001/healthcheck/liveness
@@ -64,4 +64,4 @@ docker run -p 7001:7001 --name kordon-app kordon:latest
 
 
 ### Contributing
-Any contributions or features are nicely welcomed.
+Any contributions or feature implementations are nicely welcomed

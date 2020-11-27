@@ -1,7 +1,7 @@
 # Kordon | Elasticsearch Metric Notifier
 Kordon is simply aimed at having critical metrics capture, which is above your defined thresholds, and send alert(s) to slack channel. These critical metrics are cluster health status, CPU percentages of each node in cluster, JVM memory percentage of each node in cluster, indexing throttle status of each node in cluster for now however they are extensible regarding to your metric requirements. Configurations such as thresholds, slack webhook and so forth are stored in Couchbase as document that is consisting of key-value pair if any couchbase host is non-existing, default configurations will be set and then refreshed in every 3 minutes.
 
-***Before running application***, please make sure to have your configurations set correctly. Configurations are found in ```src/application.ts```. Configurations are customizable based on your settings
+***Before running application***, please make sure to have your configurations set correctly. Configurations are found in ```src/configuration/application.ts```. Configurations are customizable based on your settings
 
 ### Getting Started
 
